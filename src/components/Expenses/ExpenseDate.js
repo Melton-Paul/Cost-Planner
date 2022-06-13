@@ -2,17 +2,19 @@ import "../styles/ExpenseDate.css";
 import Card from "../UI/Card";
 
 export default function ExpenseDate(props) {
+  const date = new Date(props.date);
+
   let expenseDate = {
     month: "",
     day: "",
     year: "",
   };
 
-  if (props.date) {
+  if (date) {
     expenseDate = {
-      month: props.date.toLocaleString("en-US", { month: "long" }),
-      day: props.date.toLocaleString("en-US", { day: "2-digit" }),
-      year: props.date.getFullYear(),
+      month: date.toLocaleString("en-US", { month: "long" }),
+      day: date.toLocaleString("en-US", { day: "2-digit" }),
+      year: date.getFullYear(),
     };
   }
   return (

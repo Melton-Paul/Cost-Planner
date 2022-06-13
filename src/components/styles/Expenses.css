@@ -4,4 +4,17 @@
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.expenses-filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.expenses-none {
+  align-self: center;
 }
