@@ -14,7 +14,12 @@ export default function ExpenseFilter(props) {
     <div>
       <div className="expenses-filter">
         <label>Filter by year</label>
-        <select name="years" value={filter} onChange={handleChange}>
+        <select
+          name="years"
+          value={filter}
+          onChange={handleChange}
+          className="expenses-filter__input"
+        >
           <option name="year" value="All">
             All Years
           </option>

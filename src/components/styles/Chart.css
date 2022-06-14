@@ -1,0 +1,24 @@
+.chart {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8dfff;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.chart-minimize {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.chart-minimize:hover {
+  opacity: 1;
+}

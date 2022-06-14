@@ -5,6 +5,7 @@
   padding: 0.5rem;
   margin: 0.5rem 0;
   background-color: #4b4b4b;
+  position: relative;
 }
 
 .expense-item__description {
@@ -33,6 +34,23 @@
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+}
+
+.expense-item__delete {
+  margin-left: 0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.expense-item__delete:hover {
+  color: black;
+  border: 1px solid black;
 }
 
 @media (min-width: 580px) {

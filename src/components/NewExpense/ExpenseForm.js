@@ -1,10 +1,12 @@
 import React from "react";
+import { nanoid } from "nanoid";
 import "../styles/ExpenseForm.css";
 export default function ExpenseForm(props) {
   const [form, setForm] = React.useState({
     title: "",
     amount: 0,
     date: "",
+    id: "",
   });
 
   function handleInput(e) {
@@ -15,7 +17,7 @@ export default function ExpenseForm(props) {
       }
     }
     setForm((prev) => {
-      return { ...prev, [name]: value };
+      return { ...prev, [name]: value, id: nanoid() };
     });
   }
 
@@ -26,6 +28,7 @@ export default function ExpenseForm(props) {
       title: "",
       amount: 0,
       date: "",
+      id: "",
     });
   }
 
@@ -76,6 +79,7 @@ export default function ExpenseForm(props) {
           </div>
         </div>
         <div className="new-expense__actions">
+          <button onClick={() => props.setIsShown(false)}>Cancel</button>
           <button type="submit">Add Expense</button>
         </div>
       </form>

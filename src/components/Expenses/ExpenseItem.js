@@ -6,6 +6,7 @@ export default function ExpenseItem(props) {
   const { data } = props;
   const expenseTitle = data.title;
   const expenseAmount = data.amount;
+  console.log(data);
 
   return (
     <Card className="expense-item">
@@ -14,6 +15,12 @@ export default function ExpenseItem(props) {
         <h2>{expenseTitle}</h2>
         <div className="expense-item__price">${expenseAmount}</div>
       </div>
+      <button
+        className="expense-item__delete"
+        onClick={() => props.deleteEntry(data.id)}
+      >
+        x
+      </button>
     </Card>
   );
 }

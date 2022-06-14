@@ -7,12 +7,20 @@
   color: white;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .expenses-filter {
   display: flex;
   justify-content: space-between;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
+  align-items: center;
+  font-weight: bold;
+}
+.expenses-filter__input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
 .expenses-none {
