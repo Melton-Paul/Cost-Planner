@@ -15,10 +15,14 @@ export default function ExpenseForm(props) {
       if (value < 0 || value > 999999) {
         return;
       }
+      setForm((prev) => {
+        return { ...prev, amount: +value, id: nanoid() };
+      });
+    } else {
+      setForm((prev) => {
+        return { ...prev, [name]: value, id: nanoid() };
+      });
     }
-    setForm((prev) => {
-      return { ...prev, [name]: value, id: nanoid() };
-    });
   }
 
   function onFormSubmit(e) {

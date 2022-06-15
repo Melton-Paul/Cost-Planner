@@ -1,4 +1,4 @@
-import "../styles/ExpenseDate.css";
+import styles from "../styles/ExpenseDate.module.css";
 import Card from "../UI/Card";
 
 export default function ExpenseDate(props) {
@@ -18,10 +18,10 @@ export default function ExpenseDate(props) {
     };
   }
   return (
-    <Card className="expense-date">
-      <span className="expense-date__month">{expenseDate.month}</span>
-      <span className="expense-date__day">{expenseDate.day}th</span>
-      <span className="expense-date__year">{expenseDate.year}</span>
+    <Card className={styles.expenseDate}>
+      <span className={styles.expenseDate__month}>{expenseDate.month}</span>
+      <span className={styles.expenseDate__day}>{expenseDate.day}th</span>
+      <span className={styles.expenseDate__year}>{expenseDate.year}</span>
     </Card>
   );
 }
